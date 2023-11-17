@@ -1,9 +1,10 @@
-#!/bin/bash -eu
+#!/bin/bash
 
 DSTDIR="./layer"
 ZIPFILE="layer.zip"
 BUCLET_NAME=$1
 LAYER_NAME=$2
+VERSION=3.11.6
 
 sudo yum install -y openssl11 openssl11-devel
 sudo yum install -y gcc make zlib-devel bzip2 bzip2-devel readline-devel sqlite-devel tk-devel libffi-devel xz-devel
@@ -15,8 +16,8 @@ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
 echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(pyenv init -)"' >> ~/.bashrc
 source ~/.bashrc
-pyenv install 3.11.6
-pyenv global 3.11.6
+pyenv install $VERSION
+pyenv global $VERSION
  
 if [ -e $DSTDIR ]; then
   sudo rm -rf $DSTDIR

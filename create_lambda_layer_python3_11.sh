@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -eu
 
 DSTDIR="./layer"
 ZIPFILE="layer.zip"
@@ -7,8 +7,8 @@ LAYER_NAME=$2
 
 sudo yum install -y openssl11 openssl11-devel
 sudo yum install -y gcc make zlib-devel bzip2 bzip2-devel readline-devel sqlite-devel tk-devel libffi-devel xz-devel
-if [ -e .pyenv ]; then
-  sudo rm -rf .pyenv
+if [ -e ~/.pyenv ]; then
+  sudo rm -rf ~/.pyenv
 fi
 git clone https://github.com/yyuu/pyenv.git ~/.pyenv
 echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc

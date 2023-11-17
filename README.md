@@ -3,6 +3,7 @@
 ## Description
 
 - Install Python 3.11
+- Create s3 Bucket.
 - Create and publish a Lambda Layer
 - Upload the Lambda Layer to s3 Bucket 
 

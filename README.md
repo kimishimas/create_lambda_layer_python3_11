@@ -2,7 +2,17 @@
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+- Install Python 3.11
+- Create and publish a Lambda Layer
+- Upload the Lambda Layer to s3 Bucket 
+
+## Usage
+
+Please edit requirements.txt.
+
+```
+./create_lambda_layer_python3_11.sh <BUCKET_NAME> <LAYER_NAME>
+```
 
 ## Authors
 
